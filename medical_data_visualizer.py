@@ -3,7 +3,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-<<<<<<< HEAD
 # Import data
 df = pd.read_csv("medical_examination.csv")
 
@@ -13,20 +12,10 @@ df['overweight'] = np.where(((df['weight'] / ((df['height']/100)**2)) > 25), 1, 
 # Normalize data by making 0 always good and 1 always bad. If the value of 'cholesterol' or 'gluc' is 1, make the value 0. If the value is more than 1, make the value 1.
 df['cholesterol'] = np.where(df['cholesterol'] > 1, 1, 0)
 df['gluc'] = np.where(df['gluc'] > 1, 1, 0)
-=======
-# 1
-df = None
-
-# 2
-df['overweight'] = None
-
-# 3
->>>>>>> ffb0c5aabe599b4d6deb843e02cf18a8cd64c7a5
 
 
 # 4
 def draw_cat_plot():
-<<<<<<< HEAD
     # Create DataFrame for cat plot using `pd.melt` using just the values from 'cholesterol', 'gluc', 'smoke', 'alco', 'active', and 'overweight'.
     df_cat = df.melt(id_vars="cardio", value_vars=['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight'])
 
@@ -41,22 +30,6 @@ def draw_cat_plot():
 
     # Get the figure for the output
     fig = p.fig
-=======
-    # 5
-    df_cat = None
-
-
-    # 6
-    df_cat = None
-    
-
-    # 7
-
-
-
-    # 8
-    fig = None
->>>>>>> ffb0c5aabe599b4d6deb843e02cf18a8cd64c7a5
 
 
     # 9
@@ -66,7 +39,6 @@ def draw_cat_plot():
 
 # 10
 def draw_heat_map():
-<<<<<<< HEAD
     # Clean the data
     df_heat = df[
         (df['ap_lo'] <= df['ap_hi']) &
@@ -87,24 +59,6 @@ def draw_heat_map():
 
     # Draw the heatmap with 'sns.heatmap()'
     sns.heatmap(corr, annot=True, fmt=".1f", mask=mask, square=True, ax=ax)
-=======
-    # 11
-    df_heat = None
-
-    # 12
-    corr = None
-
-    # 13
-    mask = None
-
-
-
-    # 14
-    fig, ax = None
-
-    # 15
-
->>>>>>> ffb0c5aabe599b4d6deb843e02cf18a8cd64c7a5
 
 
     # 16
